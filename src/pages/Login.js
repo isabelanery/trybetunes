@@ -41,11 +41,10 @@ class Login extends React.Component {
       description: '',
     });
 
-    // this.setState({ loading: false });
-
     const { history } = this.props;
 
     history.push('/search');
+    // this.setState({ loading: false });
   }
 
   render() {
@@ -66,6 +65,7 @@ class Login extends React.Component {
                     name="nameUser"
                     onChange={ this.handleChange }
                     value={ nameLogin }
+                    placeholder="Nome"
                   />
                   <button
                     data-testid="login-submit-button"
@@ -84,8 +84,8 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
-
 Login.propTypes = {
-  history: PropTypes.element.isRequired,
+  history: PropTypes.objectOf(PropTypes.object).isRequired,
 };
+
+export default Login;
