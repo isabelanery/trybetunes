@@ -1,6 +1,7 @@
 import React from 'react';
 import { getUser } from '../services/userAPI';
 import Loading from './Loading';
+import NavBar from './NavBar';
 
 class Header extends React.Component {
   constructor() {
@@ -42,6 +43,8 @@ class Header extends React.Component {
             <p data-testid="header-user-name">
               { userName }
             </p>)}
+
+        <NavBar />
       </header>
     );
   }
