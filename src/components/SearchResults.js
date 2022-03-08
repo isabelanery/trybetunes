@@ -18,14 +18,11 @@ class SearchResults extends React.Component {
             results.length > 0
               ? results.map((album) => (
                 <div key={ album.collectionId }>
-                  <p>
-                    { `${album.collectionName}` }
-                  </p>
                   <Link
                     to={ `/album/${album.collectionId}` }
                     data-testid={ `link-to-album-${album.collectionId}` }
                   >
-                    Profile
+                    { `${album.collectionName}` }
                   </Link>
                 </div>))
               : <p>Nenhum álbum foi encontrado</p>
@@ -39,7 +36,7 @@ class SearchResults extends React.Component {
 
 SearchResults.propTypes = {
   artist: PropTypes.string.isRequired,
-  results: PropTypes.arrayOf(PropTypes.object).isRequired,
+  results: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 export default SearchResults;
