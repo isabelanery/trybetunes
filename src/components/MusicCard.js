@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 class MusicCard extends React.Component {
@@ -24,7 +23,6 @@ MusicCard.propTypes = {
   previewUrl: PropTypes.string.isRequired,
   trackName: PropTypes.string.isRequired,
   albumImage: PropTypes.string.isRequired,
-  // results: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 export default MusicCard;
