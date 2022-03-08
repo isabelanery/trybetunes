@@ -10,7 +10,6 @@ class Header extends React.Component {
     this.userName = this.userName.bind(this);
 
     this.state = {
-      // loading: false,
       userName: '',
     };
   }
@@ -20,13 +19,9 @@ class Header extends React.Component {
   }
 
   async userName() {
-    // this.setState({ loading: true });
-
     const name = await getUser();
-    // console.log(name.name);
 
     this.setState({
-      // loading: false,
       userName: name.name,
     });
   }
