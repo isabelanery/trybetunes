@@ -79,4 +79,9 @@ MusicCard.propTypes = {
   albumImage: PropTypes.string,
 };
 
+MusicCard.defaultProps = {
+  albumImage: '',
+
+};
+
 export default MusicCard;
