@@ -26,18 +26,15 @@ class Album extends React.Component {
 
     const data = await getMusics(id);
     const musicList = data.filter((element, index) => index !== 0);
-    // console.log(musicList);
 
     this.setState({
       artistName: data[0].artistName,
       albumName: data[0].collectionName,
       albumMusics: musicList,
     });
-    // artistName = data[0].artistName;
   }
 
   render() {
-    // console.log(id);
     const { artistName, albumName, albumMusics } = this.state;
 
     return (
