@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { addSong, removeSong } from '../services/favoriteSongsAPI';
 import Loading from './Loading';
-// import { addSong, removeSong } from '../services/favoriteSongsAPI';
+import { addSong, removeSong } from '../services/favoriteSongsAPI';
 
 class MusicCard extends React.Component {
   constructor() {
@@ -31,7 +30,7 @@ class MusicCard extends React.Component {
       [name]: checked,
       loading: true,
     }, async () => {
-      const { musicData } = this.props;
+      const { musicData, getFavs } = this.props;
       const { favorite } = this.state;
 
       if (favorite === true) {
@@ -40,6 +39,7 @@ class MusicCard extends React.Component {
         await removeSong(musicData);
       }
 
+      getFavs();
       this.setState({ loading: false });
     });
   }
@@ -92,11 +92,12 @@ MusicCard.propTypes = {
   musicData: PropTypes.objectOf(PropTypes.any).isRequired,
   isFavorite: PropTypes.bool.isRequired,
   albumImage: PropTypes.string,
+  getFavs: PropTypes.func,
 };
 
 MusicCard.defaultProps = {
   albumImage: '',
-
+  getFavs: () => {},
 };
 
 export default MusicCard;
