@@ -11,7 +11,7 @@ class ProfileEdit extends React.Component {
     this.state = {
       loading: false,
       disableBtn: true,
-      redirect: false,
+      // redirect: false,
       user: {
         name: undefined,
         email: undefined,
