@@ -47,7 +47,6 @@ class Search extends React.Component {
     return (
       <div data-testid="page-search" className="search">
         <div className="search-form">
-          
           <form>
             <input
               data-testid="search-artist-input"
@@ -69,7 +68,6 @@ class Search extends React.Component {
             </button>
           </form>
         </div>
-        
 
         {
           searchingFor !== ''

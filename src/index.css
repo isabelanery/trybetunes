@@ -113,3 +113,36 @@ nav {
 .favorites-page {
   margin: 20px;
 }
+
+.profile {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  color: rgb(105, 105, 105);
+}
+
+.userInfo img {
+  width: 200px;
+}
+
+.userInfo-edit {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.userInfo-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.userInfo-input input {
+  margin: 0 0 13px 0 ;
+}

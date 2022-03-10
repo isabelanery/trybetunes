@@ -39,8 +39,8 @@ class Profile extends React.Component {
           loading ? <Loading />
             : user
               && (
-                <section className="userInfo">
-                  <div>
+                <section className="profile">
+                  <div className="userInfo">
                     <p>
                       { user.name }
                     </p>
@@ -60,7 +60,11 @@ class Profile extends React.Component {
                     />
                   </div>
 
-                  <Link to="/profile/edit">Editar perfil</Link>
+                  <div>
+                    <Link to="/profile/edit" className="btn btn-outline-dark">
+                      Editar perfil
+                    </Link>
+                  </div>
                 </section>
 
               )
