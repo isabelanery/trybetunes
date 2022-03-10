@@ -18,8 +18,6 @@ class MusicCard extends React.Component {
   componentDidMount() {
     const { isFavorite } = this.props;
 
-    console.log(isFavorite);
-
     this.setState({ favorite: isFavorite });
   }
 
@@ -49,16 +47,25 @@ class MusicCard extends React.Component {
     const { favorite, loading } = this.state;
 
     return (
-      <div>
+      <div className="margin-card">
         {
           loading
             ? <Loading />
             : (
-              <div className="music">
-                <div className="text-music">
+              <div className="musicCard">
+                <img src={ albumImage } alt={ trackName } />
+
+                <div className="music">
                   <p>
                     { trackName }
                   </p>
+
+                  <audio data-testid="audio-component" src={ previewUrl } controls>
+                    <track kind="captions" />
+                  </audio>
+                </div>
+
+                <div className="favorite">
                   <label htmlFor={ trackId }>
                     <input
                       data-testid={ `checkbox-music-${trackId}` }
@@ -66,16 +73,13 @@ class MusicCard extends React.Component {
                       type="checkbox"
                       checked={ favorite }
                       name="favorite"
+                      className="form-check-input"
                       onChange={ this.handleChange }
                     />
                     Favorita
                   </label>
                 </div>
 
-                <img src={ albumImage } alt={ trackName } />
-                <audio data-testid="audio-component" src={ previewUrl } controls>
-                  <track kind="captions" />
-                </audio>
               </div>)
 
         }

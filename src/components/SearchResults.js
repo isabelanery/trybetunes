@@ -7,7 +7,7 @@ class SearchResults extends React.Component {
     const { artist, results } = this.props;
 
     return (
-      <div>
+      <div className="search-results">
         <p>
           {`Resultado de álbuns de: ${artist}` }
         </p>
@@ -21,6 +21,7 @@ class SearchResults extends React.Component {
                   <Link
                     to={ `/album/${album.collectionId}` }
                     data-testid={ `link-to-album-${album.collectionId}` }
+                    className="album-link"
                   >
                     { `${album.collectionName}` }
                   </Link>

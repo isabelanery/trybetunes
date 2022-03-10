@@ -33,7 +33,7 @@ class Favorites extends React.Component {
     const { loading, favList } = this.state;
 
     return (
-      <div data-testid="page-favorites">
+      <div data-testid="page-favorites" className="favorites-page">
         {
           loading ? <Loading />
             : favList

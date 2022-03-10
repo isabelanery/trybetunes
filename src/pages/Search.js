@@ -45,25 +45,31 @@ class Search extends React.Component {
     const { searchInput, searchingFor, results, disableBtn } = this.state;
 
     return (
-      <div data-testid="page-search">
-        <form>
-          <input
-            data-testid="search-artist-input"
-            type="text"
-            name="searchInput"
-            onChange={ this.handleChange }
-            value={ searchInput }
-            placeholder="Nome do artista"
-          />
-          <button
-            data-testid="search-artist-button"
-            type="submit"
-            disabled={ disableBtn }
-            onClick={ this.handleClick }
-          >
-            Pesquisar
-          </button>
-        </form>
+      <div data-testid="page-search" className="search">
+        <div className="search-form">
+          
+          <form>
+            <input
+              data-testid="search-artist-input"
+              className="loginInput"
+              type="text"
+              name="searchInput"
+              onChange={ this.handleChange }
+              value={ searchInput }
+              placeholder="Nome do artista"
+            />
+            <button
+              data-testid="search-artist-button"
+              className="btn btn-outline-dark"
+              type="submit"
+              disabled={ disableBtn }
+              onClick={ this.handleClick }
+            >
+              Pesquisar
+            </button>
+          </form>
+        </div>
+        
 
         {
           searchingFor !== ''

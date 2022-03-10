@@ -30,17 +30,22 @@ class Header extends React.Component {
     const { userName } = this.state;
 
     return (
-      <header data-testid="header-component">
-        <h1>TrybeTunes</h1>
+      <>
+        <header
+          data-testid="header-component"
+          className="p-3 bg-dark text-white"
+        >
+          <h1>TrybeTunes</h1>
 
-        { userName === '' ? <Loading />
-          : (
-            <p data-testid="header-user-name">
-              { userName }
-            </p>)}
+          { userName === '' ? <Loading />
+            : (
+              <p data-testid="header-user-name">
+                { userName }
+              </p>)}
 
+        </header>
         <NavBar />
-      </header>
+      </>
     );
   }
 }

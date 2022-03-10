@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Loading from '../components/Loading';
 import { getUser } from '../services/userAPI';
+import 'bootstrap/dist/css/bootstrap.css';
 
 class Profile extends React.Component {
   constructor() {
@@ -39,23 +40,25 @@ class Profile extends React.Component {
             : user
               && (
                 <section className="userInfo">
-                  <p>
-                    { user.name }
-                  </p>
+                  <div>
+                    <p>
+                      { user.name }
+                    </p>
 
-                  <p>
-                    { user.email }
-                  </p>
+                    <p>
+                      { user.email }
+                    </p>
 
-                  <p>
-                    { user.description }
-                  </p>
+                    <p>
+                      { user.description }
+                    </p>
 
-                  <img
-                    src={ user.image }
-                    alt={ user.name }
-                    data-testid="profile-image"
-                  />
+                    <img
+                      src={ user.image }
+                      alt={ `Foto de ${user.name}` }
+                      data-testid="profile-image"
+                    />
+                  </div>
 
                   <Link to="/profile/edit">Editar perfil</Link>
                 </section>

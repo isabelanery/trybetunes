@@ -17,3 +17,99 @@ code {
   display: flex;
   justify-content: center;
 }
+
+header { 
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+}
+
+.login {
+  align-items: center;
+  display: flex;
+  height: 400px;
+  justify-content: center;
+}
+
+.loginInput {
+  border: 1px solid rgb(134, 134, 134);
+  border-radius: 4px;
+  margin-right: 13px;
+  padding: 6px;
+}
+
+.search-form{
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+}
+
+.search-form form, .login form {
+  display: flex;
+}
+
+.search-results{
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px 30px;
+  
+}
+
+.album-link {
+  text-decoration: none;
+}
+
+.musicCard {
+  border: 1px solid rgb(201, 201, 201);
+  display: flex;
+  padding: 13px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.margin-card{
+  margin: 10px 10px 0 0 ;
+}
+
+.music {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.favorite {
+  align-items: center;
+  display: flex;
+}
+
+.favorite input {
+  margin-right: 7px;
+}
+
+.music-album {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 10px 0;
+}
+
+.album {
+  display: flex;
+
+}
+
+.artist{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px 10px 20px;
+}
+
+.favorites-page {
+  margin: 20px;
+}

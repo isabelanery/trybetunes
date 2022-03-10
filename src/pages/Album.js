@@ -47,13 +47,15 @@ class Album extends React.Component {
     const { artistName, albumName, albumMusics, favoritesList } = this.state;
 
     return (
-      <div data-testid="page-album">
-        <h1 data-testid="artist-name">
-          { artistName }
-        </h1>
-        <h2 data-testid="album-name">
-          { albumName }
-        </h2>
+      <div data-testid="page-album" className="album">
+        <div className="artist">
+          <h1 data-testid="artist-name">
+            { artistName }
+          </h1>
+          <h2 data-testid="album-name">
+            { albumName }
+          </h2>
+        </div>
 
         <section className="music-album">
           {

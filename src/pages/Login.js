@@ -50,7 +50,7 @@ class Login extends React.Component {
     const { nameLogin, disableBtn, loading } = this.state;
 
     return (
-      <main>
+      <div className="login">
 
         {
           loading
@@ -61,6 +61,7 @@ class Login extends React.Component {
                   <input
                     data-testid="login-name-input"
                     type="text"
+                    className="loginInput"
                     name="nameUser"
                     onChange={ this.handleChange }
                     value={ nameLogin }
@@ -68,6 +69,7 @@ class Login extends React.Component {
                   />
                   <button
                     data-testid="login-submit-button"
+                    className="btn btn-outline-dark"
                     type="submit"
                     disabled={ disableBtn }
                     onClick={ this.handleClick }
@@ -78,7 +80,7 @@ class Login extends React.Component {
               </div>)
         }
 
-      </main>
+      </div>
     );
   }
 }
