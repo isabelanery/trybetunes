@@ -1,6 +1,8 @@
 import React from 'react';
 import SearchResults from '../components/SearchResults';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
+import Header from '../components/Header';
+import '../css/Search.css';
 
 class Search extends React.Component {
   constructor() {
@@ -46,11 +48,13 @@ class Search extends React.Component {
 
     return (
       <div data-testid="page-search" className="search">
-        <div className="search-form">
-          <form>
+        <Header />
+
+        <div className="search-container">
+          <form className="search-form">
             <input
               data-testid="search-artist-input"
-              className="loginInput"
+              className="search-input"
               type="text"
               name="searchInput"
               onChange={ this.handleChange }
@@ -59,7 +63,7 @@ class Search extends React.Component {
             />
             <button
               data-testid="search-artist-button"
-              className="btn btn-outline-dark"
+              className="searchBtn"
               type="submit"
               disabled={ disableBtn }
               onClick={ this.handleClick }

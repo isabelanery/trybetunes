@@ -1,148 +1,56 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --main-color: #3B3546;
+  --dark-transparency: #3b354672;
+  --transparency-card: #13111882;
+  --second-color: #A167A5;
+  --btn-hover: #7D4B81;
+  --accent-color: #D8D4F2;
+  --light-transparency: #d8d4f26f;
+  --text-light: #F1EFFA;
+  --text-dark: #1D1A23;
+  --transparency: rgba(255, 255, 255, 0);
 }
 
-.loading {
+.app-container {
   align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-header { 
-  align-items: flex-end;
-  display: flex;
-  justify-content: space-between;
-}
-
-nav {
-  display: flex;
-}
-
-.login {
-  align-items: center;
-  display: flex;
-  height: 400px;
-  justify-content: center;
-}
-
-.loginInput {
-  border: 1px solid rgb(134, 134, 134);
-  border-radius: 4px;
-  margin-right: 13px;
-  padding: 6px;
-}
-
-.search-form{
-  align-items: center;
-  display: flex;
-  height: 100px;
-  justify-content: center;
-}
-
-.search-form form, .login form {
-  display: flex;
-}
-
-.search-results{
-  display: flex;
+  background-image: linear-gradient(180.0875052343223deg, rgba(161, 103, 165,1) -2.0545746388443007%,rgba(39, 35, 46,1) 83.33868378812198%);
   flex-direction: column;
-  margin: 0 30px 30px;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+} 
+
+input:-webkit-autofill , input:-webkit-autofill:hover
+, input:-webkit-autofill:focus , textarea:-webkit-autofill
+, textarea:-webkit-autofill:hover , textarea:-webkit-autofill:focus
+, select:-webkit-autofill , select:-webkit-autofill:hover
+, select:-webkit-autofill:focus {
+  background: none;
+  border: 0.1rem solid var(--second-color);
+  box-sizing: border-box;
+  color: var(--text-ligth);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  -webkit-transition: border 1s;
+  -webkit-text-fill-color: var(--accent-color);
+  transition: background-color 6000s ease-in-out 0s;
+}
   
+input:focus, textarea:focus, select:focus {
+outline-offset: 0px !important;
+outline: none !important;
 }
 
-.album-link {
-  text-decoration: none;
-}
-
-.musicCard {
-  border: 1px solid rgb(201, 201, 201);
-  display: flex;
-  padding: 13px;
-  border-radius: 4px;
-  width: fit-content;
-}
-
-.margin-card{
-  margin: 10px 10px 0 0 ;
-}
-
-.music {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 10px;
-}
-
-.favorite {
-  align-items: center;
-  display: flex;
-}
-
-.favorite input {
-  margin-right: 7px;
-}
-
-.music-album {
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 10px 0;
-}
-
-.album {
-  display: flex;
-
-}
-
-.artist{
-  display: flex;
-  flex-direction: column;
-  padding: 20px 10px 10px 20px;
-}
-
-.favorites-page {
-  margin: 20px;
-}
-
-.profile {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  margin: 30px;
-}
-
-.userInfo {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
-  color: rgb(105, 105, 105);
-}
-
-.userInfo img {
-  width: 200px;
-}
-
-.userInfo-edit {
-  display: flex;
-  flex-direction: column;
-  margin: 30px;
-}
-
-.userInfo-input {
-  display: flex;
-  flex-direction: column;
-}
-
-.userInfo-input input {
-  margin: 0 0 13px 0 ;
+::selection {
+  background-color: var(--btn-hover);
 }

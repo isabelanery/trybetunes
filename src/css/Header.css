@@ -1,0 +1,48 @@
+header {
+  align-items: center;
+  color: var(--text-color);
+  display: flex;
+  font-weight: 100;
+  justify-content: space-between;
+  padding: 32px;
+}
+
+.header-icon {
+  margin-right: 12px;
+}
+
+h1 {
+  margin: 0;
+  color: var(--accent-color);
+}
+
+.trybetunes:hover {
+  color: var(--main-color);
+}
+
+.user {
+  align-items: center;
+  background-color: var(--dark-transparency);
+  border-radius: 1.6rem;
+  display: flex;
+  padding: 12px;
+  /* margin-bottom: 8px; */
+}
+
+.user-name {
+  font-size: 1.1rem;
+  margin-left: 12px;
+  margin-bottom: 0;
+  color: var(--accent-color);
+}
+
+.user-img {
+  border-radius: 100%;
+  height: 28px;
+  width: 28px;
+}
+
+.right-side {
+  align-items: center;
+  display: flex;
+}

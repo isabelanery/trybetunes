@@ -1,0 +1,15 @@
+nav {
+  display: flex;
+  margin-left: 16px;
+}
+
+nav * {
+  color: var(--accent-color);
+  text-decoration: none;
+  padding: 0 8px;
+  font-size: 1.3rem;
+}
+
+nav *:hover {
+  color: var(--main-color);
+}

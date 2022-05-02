@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Loading from '../components/Loading';
+import Header from '../components/Header';
 import { getUser } from '../services/userAPI';
-import 'bootstrap/dist/css/bootstrap.css';
 
 class Profile extends React.Component {
   constructor() {
@@ -35,6 +35,7 @@ class Profile extends React.Component {
 
     return (
       <div data-testid="page-profile">
+        <Header />
         {
           loading ? <Loading />
             : user

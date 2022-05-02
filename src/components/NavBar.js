@@ -1,21 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../css/NavBar.css';
 
 class NavBar extends React.Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
-          <Link to="/search" data-testid="link-to-search" className="nav-link">
+      <nav>
+        <Link to="/search" data-testid="link-to-search" className="nav-link">
+          <h4>
             Pesquisar
-          </Link>
-          <Link to="/favorites" data-testid="link-to-favorites" className="nav-link">
+          </h4>
+        </Link>
+        <Link to="/favorites" data-testid="link-to-favorites" className="nav-link">
+          <h4>
             Favoritas
-          </Link>
-          <Link to="/profile" data-testid="link-to-profile" className="nav-link">
+          </h4>
+        </Link>
+        <Link to="/profile" data-testid="link-to-profile" className="nav-link">
+          <h4>
             Profile
-          </Link>
-        </div>
+          </h4>
+        </Link>
       </nav>
     );
   }

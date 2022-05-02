@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Loading from '../components/Loading';
 import { getUser, updateUser } from '../services/userAPI';
+import Header from '../components/Header';
 
 class ProfileEdit extends React.Component {
   constructor() {
@@ -29,10 +30,10 @@ class ProfileEdit extends React.Component {
   }
 
   handleChange = ({ target }) => {
-    const { name: userName, value } = target;
+    const { name: targetName, value } = target;
 
     this.setState((prevState) => ({
-      user: { ...prevState.user, [userName]: value },
+      user: { ...prevState.user, [targetName]: value },
     }), () => {
       const { user: { name, email, image, description } } = this.state;
       const verifyName = (name, email, image, description);
@@ -80,6 +81,8 @@ class ProfileEdit extends React.Component {
 
     return (
       <div data-testid="page-profile-edit">
+        <Header />
+
         {
           loading ? <Loading />
             : user

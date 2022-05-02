@@ -2,6 +2,7 @@ import React from 'react';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import Loading from '../components/Loading';
 import MusicCard from '../components/MusicCard';
+import Header from '../components/Header';
 
 class Favorites extends React.Component {
   constructor() {
@@ -34,6 +35,8 @@ class Favorites extends React.Component {
 
     return (
       <div data-testid="page-favorites" className="favorites-page">
+        <Header />
+
         {
           loading ? <Loading />
             : favList

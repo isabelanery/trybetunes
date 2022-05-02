@@ -1,0 +1,43 @@
+.search-results {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card-result {
+  align-items: center;
+  background-color: var(--transparency-card);
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--transparency);
+  /* border: 1px solid var(); */
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+  padding: 16px;
+  /* width: ; */
+}
+
+.card-result:hover {
+  border: 0.1rem solid var(--second-color);
+}
+
+.albumImg {
+  width: 180px;
+  height: 180px;
+}
+
+.album-name {
+  max-width: 176px;
+  padding: 12px 4px;
+}
+
+.artist-name {
+  max-width: 176px;
+  padding: 0 4px;
+}

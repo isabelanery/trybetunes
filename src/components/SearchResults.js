@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import '../css/SearchResults.css';
 
 class SearchResults extends React.Component {
   render() {
@@ -12,20 +13,28 @@ class SearchResults extends React.Component {
           {`Resultado de álbuns de: ${artist}` }
         </p>
 
-        <section className="search-result">
+        <section className="search-section">
 
           {
             results.length > 0
               ? results.map((album) => (
-                <div key={ album.collectionId }>
-                  <Link
-                    to={ `/album/${album.collectionId}` }
-                    data-testid={ `link-to-album-${album.collectionId}` }
-                    className="album-link"
-                  >
+                <Link
+                  key={ album.collectionId }
+                  to={ `/album/${album.collectionId}` }
+                  data-testid={ `link-to-album-${album.collectionId}` }
+                  className="card-result"
+                >
+
+                  <img src={ album.artworkUrl100 } alt="album" className="albumImg" />
+
+                  <p className="album-name">
                     { `${album.collectionName}` }
-                  </Link>
-                </div>))
+                  </p>
+
+                  <p className="artist-name">
+                    { `${album.artistName}` }
+                  </p>
+                </Link>))
               : <p>Nenhum álbum foi encontrado</p>
           }
 

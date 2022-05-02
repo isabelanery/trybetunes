@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Loading from '../components/Loading';
 import { createUser } from '../services/userAPI';
+import TrybeTunes from '../components/TrybeTunes';
+import '../css/Login.css';
 
 class Login extends React.Component {
   constructor() {
@@ -36,7 +38,7 @@ class Login extends React.Component {
     await createUser({
       name: nameUser,
       email: '',
-      image: '',
+      image: 'https://www.business2community.com/wp-content/plugins/wp-user-avatars/wp-user-avatars/assets/images/mystery.jpg',
       description: '',
     });
 
@@ -50,14 +52,14 @@ class Login extends React.Component {
     const { nameLogin, disableBtn, loading } = this.state;
 
     return (
-      <div className="login">
-
+      <div className="login-container">
         {
           loading
             ? <Loading />
             : (
-              <div data-testid="page-login">
-                <form>
+              <div data-testid="page-login" className="login-wrapper">
+                <TrybeTunes />
+                <form className="login-form">
                   <input
                     data-testid="login-name-input"
                     type="text"
@@ -69,7 +71,7 @@ class Login extends React.Component {
                   />
                   <button
                     data-testid="login-submit-button"
-                    className="btn btn-outline-dark"
+                    className="loginBtn"
                     type="submit"
                     disabled={ disableBtn }
                     onClick={ this.handleClick }
@@ -86,7 +88,7 @@ class Login extends React.Component {
 }
 
 Login.propTypes = {
-  history: PropTypes.objectOf(PropTypes.object).isRequired,
-};
+  props: PropTypes.objectOf(PropTypes.any),
+}.isRequired;
 
 export default Login;
