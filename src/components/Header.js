@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 import Loading from './Loading';
 import NavBar from './NavBar';
@@ -35,11 +36,13 @@ class Header extends React.Component {
 
     return (
       <header data-testid="header-component">
-        <TrybeTunes />
+        <Link to="/search" className="trybetunes-link">
+          <TrybeTunes />
+        </Link>
 
         <div className="right-side">
           <div className="user">
-            { userName === '' ? <Loading />
+            { userName === '' ? <Loading size="small" />
               : (
                 <>
                   <img

@@ -35,10 +35,12 @@ class Login extends React.Component {
 
     this.setState({ loading: true });
 
+    const defaultProfileImg = 'https://www.business2community.com/wp-content/plugins/wp-user-avatars/wp-user-avatars/assets/images/mystery.jpg';
+
     await createUser({
       name: nameUser,
       email: '',
-      image: 'https://www.business2community.com/wp-content/plugins/wp-user-avatars/wp-user-avatars/assets/images/mystery.jpg',
+      image: defaultProfileImg,
       description: '',
     });
 
@@ -55,7 +57,7 @@ class Login extends React.Component {
       <div className="login-container">
         {
           loading
-            ? <Loading />
+            ? <Loading size="big" />
             : (
               <div data-testid="page-login" className="login-wrapper">
                 <TrybeTunes />

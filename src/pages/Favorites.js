@@ -3,6 +3,7 @@ import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import Loading from '../components/Loading';
 import MusicCard from '../components/MusicCard';
 import Header from '../components/Header';
+import '../css/Favorites.css';
 
 class Favorites extends React.Component {
   constructor() {
@@ -36,27 +37,31 @@ class Favorites extends React.Component {
     return (
       <div data-testid="page-favorites" className="favorites-page">
         <Header />
+        <section className="favorites-section">
+          { (!loading && favList && favList.length === 0)
+            && <p className="noFav">Nenhuma favorita.</p> }
 
-        {
-          loading ? <Loading />
-            : favList
-              && favList.map((music) => {
-                const isFavorite = favList
-                  .some((favorite) => favorite.trackId === music.trackId);
+          {
+            loading ? <Loading size="big" />
+              : favList
+                && favList.map((music) => {
+                  const isFavorite = favList
+                    .some((favorite) => favorite.trackId === music.trackId);
 
-                return (
-                  <MusicCard
-                    key={ music.trackId }
-                    previewUrl={ music.previewUrl }
-                    trackName={ music.trackName }
-                    albumImage={ music.artworkUrl100 }
-                    trackId={ music.trackId }
-                    musicData={ music }
-                    isFavorite={ isFavorite }
-                    getFavs={ this.getFavs }
-                  />);
-              })
-        }
+                  return (
+                    <MusicCard
+                      key={ music.trackId }
+                      previewUrl={ music.previewUrl }
+                      trackName={ music.trackName }
+                      albumImage={ music.artworkUrl100 }
+                      trackId={ music.trackId }
+                      musicData={ music }
+                      isFavorite={ isFavorite }
+                      getFavs={ this.getFavs }
+                    />);
+                })
+          }
+        </section>
       </div>
     );
   }

@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   padding: 0 44px;
+  
 }
 
 .search-input {
@@ -52,5 +53,4 @@
   color: var(--light-transparency);
   border: 0.1rem solid var(--second-color);
 }
-
 

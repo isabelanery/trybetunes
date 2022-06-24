@@ -1,0 +1,10 @@
+.favorites-section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 3rem;
+  min-height: 60vh;
+}
+
+.noFav {
+  color: var(--accent-color);
+}

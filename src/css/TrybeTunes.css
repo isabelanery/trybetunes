@@ -1,3 +1,8 @@
+.trybetunes {
+  display: flex;
+  align-items: center;
+}
+
 .header-icon {
-  margin-right: 12px;
+  margin-right: 0.75rem;
 }

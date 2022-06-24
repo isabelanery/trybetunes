@@ -1,0 +1,53 @@
+.profile {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+}
+
+.userInfo {
+  align-items: center;
+  background-color: var(--dark-transparency);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem;
+  padding: 2rem 2.5rem;
+}
+
+.userInfo:hover {
+  box-shadow: 0.2rem 0.2rem 1rem var(--second-color);
+}
+
+.userInfo img {
+  border-radius: 1rem;
+  width: 11rem;
+}
+
+.userInfo p {
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+
+.editBtn {
+  background-color: var(--second-color);
+  border: 0.1rem solid var(--second-color);
+  border-color: var(--second-color);
+  border-radius: 16px;
+  color: var(--accent-color);
+  padding: 0.8rem;
+  text-decoration: none;
+  transition: 0.7s;
+}
+
+.editBtn:disabled, .editBtn:disabled:hover {
+  background-color: var(--transparency);
+  color: var(--light-color-transparency);
+  border: 0.1rem solid var(--second-color);
+}
+
+.editBtn:hover {
+  background-color: var(--btn-hover);
+  border: 0.1rem solid var(--btn-hover);
+  transition: 0.7s;
+}

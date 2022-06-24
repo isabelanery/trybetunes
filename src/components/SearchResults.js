@@ -9,7 +9,7 @@ class SearchResults extends React.Component {
 
     return (
       <div className="search-results">
-        <p>
+        <p className="p-results">
           {`Resultado de álbuns de: ${artist}` }
         </p>
 

@@ -1,15 +1,30 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import '../css/Loading.css';
 
 class Loading extends React.Component {
   render() {
+    const { size } = this.props;
     return (
-      <div className="d-flex justify-content-center">
-        <div className="spinner-border spinner-border-sm" role="status">
-          <span className="visually-hidden">Carregando...</span>
+      <>
+        <p className="hide">Carregando...</p>
+        <div className={ `loader-${size}` }>
+          <span className={ `stroke-${size}` } />
+          <span className={ `stroke-${size}` } />
+          <span className={ `stroke-${size}` } />
+          <span className={ `stroke-${size}` } />
+          <span className={ `stroke-${size}` } />
+          <span className={ `stroke-${size}` } />
+          <span className={ `stroke-${size}` } />
+          <span className={ `stroke-${size}` } />
         </div>
-      </div>
+      </>
     );
   }
 }
+
+Loading.propTypes = {
+  size: PropTypes.string.isRequired,
+};
 
 export default Loading;
