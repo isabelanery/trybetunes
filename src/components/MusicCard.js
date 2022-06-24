@@ -64,43 +64,43 @@ class MusicCard extends React.Component {
     return (
       <div className="music-container">
         <div className="music-wrapper">
-          {
-            loading
-              ? <Loading size="small" />
-              : (
-                <div className="music">
+          <div className="music">
+            {
+              loading
+                ? <Loading size="small" />
+                : (
+                  <>
+                    <span>{number}</span>
+                    <h4>{trackName}</h4>
+                    <HiPlay onClick={ (event) => this.handlePlay(event) } />
+                    <audio
+                      data-testid="audio-component"
+                      className="hidden"
+                      src={ previewUrl }
+                      controls
+                    >
+                      <track kind="captions" />
+                    </audio>
+                    <div>
+                      <label htmlFor={ trackId } className="heart">
+                        <input
+                          data-testid={ `checkbox-music-${trackId}` }
+                          id={ trackId }
+                          type="checkbox"
+                          checked={ favorite }
+                          name="favorite"
+                          className="favorite-input"
+                          onChange={ this.handleChange }
+                        />
+                        <span className="hide">Favorita</span>
+                        {favIcon}
+                      </label>
+                    </div>
 
-                  <span>{ number }</span>
-                  <h4>{ trackName }</h4>
-
-                  <HiPlay onClick={ (event) => this.handlePlay(event) } />
-                  <audio
-                    data-testid="audio-component"
-                    className="hidden"
-                    src={ previewUrl }
-                    controls
-                  >
-                    <track kind="captions" />
-                  </audio>
-
-                  <div>
-                    <label htmlFor={ trackId } className="heart">
-                      <input
-                        data-testid={ `checkbox-music-${trackId}` }
-                        id={ trackId }
-                        type="checkbox"
-                        checked={ favorite }
-                        name="favorite"
-                        className="favorite-input"
-                        onChange={ this.handleChange }
-                      />
-                      <span className="hide">Favorita</span>
-                      { favIcon }
-                    </label>
-                  </div>
-                </div>
-              )
-          }
+                  </>
+                )
+            }
+          </div>
         </div>
       </div>
 

@@ -1,5 +1,5 @@
 .top-container {
-  background-image: linear-gradient(to bottom, rgba(161, 103, 165, 1) -2.055%, rgba(39, 35, 46, 1) 83.339%);
+  background-image: linear-gradient(to top, rgba(161, 103, 165, 1) -2.055%, rgba(39, 35, 46, 1) 83.339%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
