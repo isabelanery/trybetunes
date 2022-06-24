@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 import '../css/SearchResults.css';
 
 class SearchResults extends React.Component {
+  converImg(url = '') {
+    return url.replace(/100x100bb.jpg/, '300x300bb.jpg');
+  }
+
   render() {
     const { artist, results } = this.props;
 
@@ -17,24 +21,27 @@ class SearchResults extends React.Component {
 
           {
             results.length > 0
-              ? results.map((album) => (
-                <Link
-                  key={ album.collectionId }
-                  to={ `/album/${album.collectionId}` }
-                  data-testid={ `link-to-album-${album.collectionId}` }
-                  className="card-result"
-                >
+              ? results.map((album) => {
+                const albumImg = this.converImg(album.artworkUrl100);
+                return (
+                  <Link
+                    key={ album.collectionId }
+                    to={ `/album/${album.collectionId}` }
+                    data-testid={ `link-to-album-${album.collectionId}` }
+                    className="card-result"
+                  >
 
-                  <img src={ album.artworkUrl100 } alt="album" className="albumImg" />
+                    <img src={ albumImg } alt="album" className="albumImg" />
 
-                  <p className="album-name">
-                    { `${album.collectionName}` }
-                  </p>
+                    <p className="album-name">
+                      { `${album.collectionName}` }
+                    </p>
 
-                  <p className="artist-name">
-                    { `${album.artistName}` }
-                  </p>
-                </Link>))
+                    <p className="artist-name">
+                      { `${album.artistName}` }
+                    </p>
+                  </Link>);
+              })
               : <p>Nenhum álbum foi encontrado</p>
           }
 

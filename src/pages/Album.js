@@ -55,6 +55,10 @@ class Album extends React.Component {
     this.setState({ favoritesList: data });
   }
 
+  converImg(url = '') {
+    return url.replace(/100x100bb.jpg/, '300x300bb.jpg');
+  }
+
   render() {
     const { albumImage, artistName, albumName, albumMusics,
       favoritesList, albumData } = this.state;
@@ -70,7 +74,7 @@ class Album extends React.Component {
               ? (
                 <div className="artist-container">
                   <div className="artist-wrapper">
-                    <img src={ albumImage } alt={ albumName } />
+                    <img src={ this.converImg(albumImage) } alt={ albumName } />
                     <div className="artist-info">
                       <h3 data-testid="artist-name">
                         { artistName }
