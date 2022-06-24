@@ -5,9 +5,9 @@ nav {
 
 nav * {
   color: var(--accent-color);
-  text-decoration: none;
-  padding: 0 8px;
   font-size: 1.3rem;
+  padding: 0 8px;
+  text-decoration: none;
 }
 
 nav *:hover {

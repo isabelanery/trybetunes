@@ -45,8 +45,8 @@
 }
 
 .login-form input:active {
-  color: var(--second-color);
   border: 0.15rem solid var(--second-color);
+  color: var(--second-color);
 }
 
 .loginBtn {
@@ -59,14 +59,14 @@
   transition: 0.7s;
 }
 
-.loginBtn:disabled, .loginBtn:disabled:hover {
-  background-color: var(--transparency);
-  border: 0.1rem solid var(--second-color);
-  color: var(--light-color-transparency);
-}
-
 .loginBtn:hover {
   background-color: var(--btn-hover);
   border: 0.1rem solid var(--btn-hover);
   transition: 0.7s;
+}
+
+.loginBtn:disabled, .loginBtn:disabled:hover {
+  background-color: var(--transparency);
+  border: 0.1rem solid var(--second-color);
+  color: var(--light-color-transparency);
 }

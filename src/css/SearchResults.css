@@ -2,60 +2,51 @@
   display: flex;
   flex-direction: column;
   height: 72vh;
-
 }
 
 .p-results {
   color: var(--accent-color);
-  padding: 0 3rem ;
-  /* flex: 0 1 auto;  */
+  padding: 0 3rem;
 }
 
-.search-section{
+.search-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 1rem 4rem 3rem;
-  
-  /* max-height: 66vh; */
-  /* flex: 1 1 auto;  */
 }
 
 .card-result {
   align-items: center;
   background-color: var(--transparency-card);
-  border-radius: 0.5rem;
   border: 0.1rem solid var(--transparency);
-  /* border: 1px solid var(); */
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin: 8px;
   padding: 16px;
-  /* width: ; */
   text-decoration: none;
   transition: 0.5s;
 }
 
 .card-result:hover {
-  /* background-color: var(--transparency-card-hover); */
   box-shadow: 0 0.1rem 1rem var(--accent-color);
   transition: 0.7s;
 }
 
 .albumImg {
-  width: 180px;
   height: 180px;
+  width: 180px;
 }
 
 .album-name {
+  color: var(--text-light);
   max-width: 176px;
   padding: 12px 4px;
-  color: var(--text-light);
 }
 
 .artist-name {
+  color: var(--light-transparency);
   max-width: 176px;
   padding: 0 4px;
-  color: var(--light-transparency);
 }

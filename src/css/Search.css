@@ -3,7 +3,6 @@
   display: flex;
   justify-content: center;
   padding: 0 44px;
-  
 }
 
 .search-input {
@@ -12,10 +11,10 @@
   border-color: var(--second-color);
   border-radius: 16px;
   color: var(--accent-color);
-  padding: 0.8rem;
-  min-width: 18rem;
-  margin: 1rem;
   font-size: 1rem;
+  margin: 1rem;
+  min-width: 18rem;
+  padding: 0.8rem;
 }
 
 .search-input::placeholder {
@@ -23,8 +22,8 @@
 }
 
 .search-input::selection, .search-input:hover {
-  color: var(--accent-color);
   border: 0.1rem solid var(--second-color);
+  color: var(--accent-color);
   font-size: 1rem;
 }
 
@@ -50,7 +49,6 @@
 
 .searchBtn:disabled, .searchBtn:disabled:hover {
   background-color: var(--transparency);
-  color: var(--light-transparency);
   border: 0.1rem solid var(--second-color);
+  color: var(--light-transparency);
 }
-

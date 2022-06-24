@@ -25,8 +25,8 @@
 }
 
 .userInfo p {
-  margin-bottom: 0.5rem;
   color: var(--accent-color);
+  margin-bottom: 0.5rem;
 }
 
 .editBtn {
@@ -40,14 +40,15 @@
   transition: 0.7s;
 }
 
-.editBtn:disabled, .editBtn:disabled:hover {
-  background-color: var(--transparency);
-  color: var(--light-color-transparency);
-  border: 0.1rem solid var(--second-color);
-}
-
 .editBtn:hover {
   background-color: var(--btn-hover);
   border: 0.1rem solid var(--btn-hover);
   transition: 0.7s;
 }
+
+.editBtn:disabled, .editBtn:disabled:hover {
+  background-color: var(--transparency);
+  border: 0.1rem solid var(--second-color);
+  color: var(--light-color-transparency);
+}
+

@@ -18,16 +18,13 @@
 }
 
 .userInfo-input input {
-  min-width: 40vw;
-}
-
-.userInfo-input input {
   background-color: var(--transparency);
   border: 0.1rem solid;
   border-color: var(--second-color);
   border-radius: 16px;
   color: var(--accent-color);
   margin-bottom: 1.25rem;
+  min-width: 40vw;
   padding: 0.8rem;
 }
 
@@ -45,14 +42,14 @@
   transition: 0.7s;
 }
 
-.saveBtn:disabled, .saveBtn:disabled:hover {
-  background-color: var(--transparency);
-  color: var(--light-transparency);
-  border: 0.1rem solid var(--second-color);
-}
-
 .saveBtn:hover {
   background-color: var(--btn-hover);
   border: 0.1rem solid var(--btn-hover);
   transition: 0.7s;
+}
+
+.saveBtn:disabled, .saveBtn:disabled:hover {
+  background-color: var(--transparency);
+  border: 0.1rem solid var(--second-color);
+  color: var(--light-transparency);
 }

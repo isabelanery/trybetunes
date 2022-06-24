@@ -8,8 +8,8 @@ header {
 }
 
 h1 {
-  margin: 0;
   color: var(--accent-color);
+  margin: 0;
 }
 
 .trybetunes:hover {
@@ -25,10 +25,10 @@ h1 {
 }
 
 .user-name {
-  font-size: 1.1rem;
-  margin-left: 12px;
-  margin-bottom: 0;
   color: var(--accent-color);
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  margin-left: 12px;
 }
 
 .user-img {

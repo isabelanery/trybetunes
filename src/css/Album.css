@@ -1,5 +1,5 @@
 .top-container {
-  background-image: linear-gradient(180.0875052343223deg, rgba(161, 103, 165,1) -2.0545746388443007%,rgba(39, 35, 46,1) 83.33868378812198%);
+  background-image: linear-gradient(to bottom, rgba(161, 103, 165, 1) -2.055%, rgba(39, 35, 46, 1) 83.339%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -7,13 +7,13 @@
 }
 
 .artist-container {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .artist-wrapper {
-  padding: 1rem 3rem 3rem;
   display: flex;
+  padding: 1rem 3rem 3rem;
 }
 
 .artist-wrapper img {
@@ -28,15 +28,15 @@
 }
 
 .artist-info h2 {
-  font-size: 3rem;
   color: var(--accent-color);
+  font-size: 3rem;
   margin-bottom: 0.5rem;
 }
 
 .artist-info h3 {
-  font-size: 1.7rem;
   color: var(--light-transparency);
-  margin-bottom: 0.25rem
+  font-size: 1.7rem;
+  margin-bottom: 0.25rem;
 }
 
 .artist-info p {
@@ -45,7 +45,6 @@
 
 .music-album {
   background-color: var(--music-bg);
-  padding: 2rem 2.2rem 2rem 2rem;
   min-height: 60vh;
-  
+  padding: 2rem 2.2rem 2rem 2rem;
 }
