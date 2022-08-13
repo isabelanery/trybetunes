@@ -15,3 +15,5 @@ This project was made using ReacjJS class components with state and props manipu
 
 ## In works: 
 I plan on making a mobile version.
+
+
