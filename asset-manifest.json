@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "https://isabelanery.github.io/trybetunes/static/css/main.2bdaeaf5.chunk.css",
+    "main.js": "https://isabelanery.github.io/trybetunes/static/js/main.8349e201.chunk.js",
+    "main.js.map": "https://isabelanery.github.io/trybetunes/static/js/main.8349e201.chunk.js.map",
+    "runtime-main.js": "https://isabelanery.github.io/trybetunes/static/js/runtime-main.396f4fa7.js",
+    "runtime-main.js.map": "https://isabelanery.github.io/trybetunes/static/js/runtime-main.396f4fa7.js.map",
+    "static/js/2.06bd91fc.chunk.js": "https://isabelanery.github.io/trybetunes/static/js/2.06bd91fc.chunk.js",
+    "static/js/2.06bd91fc.chunk.js.map": "https://isabelanery.github.io/trybetunes/static/js/2.06bd91fc.chunk.js.map",
+    "index.html": "https://isabelanery.github.io/trybetunes/index.html",
+    "static/css/main.2bdaeaf5.chunk.css.map": "https://isabelanery.github.io/trybetunes/static/css/main.2bdaeaf5.chunk.css.map",
+    "static/js/2.06bd91fc.chunk.js.LICENSE.txt": "https://isabelanery.github.io/trybetunes/static/js/2.06bd91fc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.396f4fa7.js",
+    "static/js/2.06bd91fc.chunk.js",
+    "static/css/main.2bdaeaf5.chunk.css",
+    "static/js/main.8349e201.chunk.js"
+  ]
+}
